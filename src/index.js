@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const component = () => {
   const el = document.createElement('div');
   const array = ['Hello', 'webpack'];
