@@ -8,4 +8,6 @@ const component = () => {
   return el;
 }
 
+console.log("test")
+
 document.body.appendChild(component());
