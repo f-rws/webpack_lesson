@@ -3,6 +3,7 @@ import { getNumberToSquared } from "./utilities";
 import { ARSENAL_RW } from "./utilities";
 import Lion from "./utilities";
 import style from "./style.css";
+import sample from "./sample.jpg";
 
 console.log(getNumberToSquared(3));
 console.log(ARSENAL_RW);
@@ -19,3 +20,10 @@ const component = () => {
 
 document.body.appendChild(component());
 document.body.classList.add("bg")
+
+const image = new Image();
+image.src = sample;
+image.width = 200;
+image.height = 130;
+
+document.body.appendChild(image);
