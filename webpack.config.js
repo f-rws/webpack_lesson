@@ -30,12 +30,19 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|svg|ico|gif)$/i,
-        loader: "url-loader",
-        options: {
-          limit: 2048,
-          name: "images/[name].[ext]"
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]'
         }
-      }
+      },
+      // {
+      //   test: /\.(jpe?g|png|svg|ico|gif)$/i,
+      //   loader: "url-loader",
+      //   options: {
+      //     limit: 2048,
+      //     name: "images/[name].[ext]"
+      //   }
+      // }
     ]
   },
   devServer: {
