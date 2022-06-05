@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const outputPath = path.resolve(__dirname, 'dist');
 // const outputPath = path.resolve(__dirname, 'public');
@@ -42,12 +43,18 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/, // node-modules 配下の .js ファイルを除外
+        exclude: /node_modules/, // node-modules 配下の .js と .jsx ファイルを除外
         use: {
           loader: "babel-loader"
           // options: {
           //   presets: ['@babel/preset-env']
           // }
+        }
+      },
+      {
+        test: /\.html$/,
+        use: {
+          loader: "html-loader"
         }
       }
       // {
@@ -65,5 +72,11 @@ module.exports = {
       directory: outputPath
     },
     open: true,
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    })
+  ]
 }
