@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/neetzama/webpack_lesson#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "npm-force-resolutions": "0.0.10",

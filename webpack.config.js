@@ -40,6 +40,16 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/, // node-modules 配下の .js ファイルを除外
+        use: {
+          loader: "babel-loader"
+          // options: {
+          //   presets: ['@babel/preset-env']
+          // }
+        }
+      }
       // {
       //   test: /\.(jpe?g|png|svg|ico|gif)$/i,
       //   loader: "url-loader",
