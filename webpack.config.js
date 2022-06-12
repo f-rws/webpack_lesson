@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
 const outputPath = path.resolve(__dirname, 'dist');
 // const outputPath = path.resolve(__dirname, 'public');
@@ -59,7 +60,7 @@ module.exports = {
         use: {
           loader: "html-loader"
         }
-      }
+      },
       // {
       //   test: /\.(jpe?g|png|svg|ico|gif)$/i,
       //   loader: "url-loader",
@@ -69,6 +70,16 @@ module.exports = {
       //   }
       // }
     ]
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      terserOptions: {
+        compress: {
+          drop_console: true
+        }
+      }
+    })],
   },
   devServer: {
     static: {

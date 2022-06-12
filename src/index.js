@@ -1,12 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
 import "./style.css";
 import "./style.scss";
 
-ReactDOM.render(
-  <div>Hello, React!</div>,
-  document.getElementById("root")
-)
+console.log("printing log");
+
+// ReactDOM.render(
+//   <div>Hello, React!</div>,
+//   document.getElementById("root")
+// )
 
 // Vanilla.js をバンドルする際に使用
 //
