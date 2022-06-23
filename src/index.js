@@ -3,12 +3,12 @@
 import "./style.css";
 import "./style.scss";
 
-console.log("printing log");
+alert("Hi, ブカヨ");
 
-// ReactDOM.render(
-//   <div>Hello, React!</div>,
-//   document.getElementById("root")
-// )
+ReactDOM.render(
+  <div>Hello, React!</div>,
+  document.getElementById("root")
+)
 
 // Vanilla.js をバンドルする際に使用
 //

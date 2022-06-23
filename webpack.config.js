@@ -85,6 +85,7 @@ module.exports = {
       new CssMinimizerWebpackPlugin()
     ],
   },
+  devtool: 'eval-source-map',
   devServer: {
     static: {
       directory: outputPath
@@ -99,5 +100,5 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css"
     })
-  ]
+  ],
 }
