@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "npx eslint src/**/*.js",
     "launch": "webpack-dev-server --open --mode production",
     "start": "webpack-dev-server --open --mode development"
   },
@@ -20,11 +21,15 @@
   "homepage": "https://github.com/neetzama/webpack_lesson#readme",
   "devDependencies": {
     "@babel/core": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-webpack-plugin": "^3.2.0",
     "file-loader": "^6.2.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",

@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const outputPath = path.resolve(__dirname, 'dist');
 // const outputPath = path.resolve(__dirname, 'public');
@@ -99,6 +100,13 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[hash].css"
+    }),
+    new ESLintPlugin({
+      extensions: [".js"],
+      exclude: [
+        "node_modules",
+        "dist"
+      ]
     })
   ],
 }
