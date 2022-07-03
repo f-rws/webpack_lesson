@@ -10,7 +10,8 @@ const outputPath = path.resolve(__dirname, 'dist');
 console.log(outputPath)
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
+  // entry: './src/index.js',
   output: {
     filename: "main.js",
     path: outputPath

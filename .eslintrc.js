@@ -1,29 +1,30 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "node": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "plugins": [
+    '@typescript-eslint',
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    'plugin:@typescript-eslint/recommended',
+    "plugin:react/recommended",
+  ],
+  "parser": "@typescript-eslint/parser",  // ESLintでTypeScriptを解析する
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": 'detect',
     },
-    "plugins": [
-        "react"
-    ],
-    "settings": {
-        "react": {
-            "version": 'detect',
-        },
-    },
-    "parser": "@babel/eslint-parser",
-    "rules": {
-    }
+  },
+  "rules": {}
 }
