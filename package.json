@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint src/**/*.js",
+    "lint": "npx eslint src/**/*.js src/**/*.ts",
     "launch": "webpack-dev-server --open --mode production",
     "start": "webpack-dev-server --open --mode development"
   },
@@ -24,6 +24,7 @@
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@types/lodash": "^4.14.182",
     "@typescript-eslint/eslint-plugin": "^5.30.3",
     "@typescript-eslint/parser": "^5.30.3",
     "babel-loader": "^8.2.5",

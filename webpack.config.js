@@ -28,6 +28,10 @@ module.exports = {
       //   ]
       // },
       {
+        test: /\.ts$/,
+        use: ['ts-loader']
+      },
+      {
         test: /\.(sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
